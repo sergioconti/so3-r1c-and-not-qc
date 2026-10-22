@@ -115,7 +115,7 @@ Numbers of sections, equations and lemmas refer to the arXiv version of the pape
 | `PeriodicAvg.lean`, `Periodic.lean` | Periodic test functions, Lemma 1.2 |
 | `Global.lean` | Minors along rank-one lines (1.5), Lemma 6.1, the smooth cutoff `χ`, the globalization (§6) |
 | `Main.lean` | Assembly: `QcSOn.main` (Theorem 1.1) |
-| `Linear.lean` | The geometrically linear example `fL F = g_lin(sym F)` (§2): Lemma 2.3 (minimizers, `QcSOn.fL_min`), Lemma 2.4, Lemma 2.5 (Steps 1–4), Theorem 2.1 `QcSOn.linear_main` |
+| `Linear.lean` | The geometrically linear example `fL F = g_lin(sym F)` (§2): Remark 2.3 (minimizers, `QcSOn.fL_min`), Lemma 2.4, Lemma 2.5 (Steps 1–4), Theorem 2.1 `QcSOn.linear_main` |
 
 ## Relation to the paper
 

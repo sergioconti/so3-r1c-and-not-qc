@@ -33,5 +33,5 @@ theorem MainResult.linearStatement_holds : MainResult.LinearStatement :=
 -- Only the standard axioms `propext`, `Classical.choice`, `Quot.sound` are used.
 #print axioms MainResult.linearStatement_holds
 
--- Lemma 2.3 (minimizers of the linear energy) also uses only the standard axioms.
+-- Remark 2.3 (minimizers of the linear energy) also uses only the standard axioms.
 #print axioms QcSOn.fL_min

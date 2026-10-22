@@ -17,7 +17,7 @@ skew-symmetric matrices, rank-one convex, and not quasiconvex (Theorem 2.1).
   triangular entries);
 * `gL_line`: the expansion of `gL (e + s m)` in powers of `s`, with coefficients `c1L`, `c2L`,
   `c3L`, `c4L`;
-* Lemma 2.3 (minimizers): `fL_min`: `fL ≥ minL = (575 - 193√193)/5832`, with equality iff
+* Remark 2.3 (minimizers): `fL_min`: `fL ≥ minL = (575 - 193√193)/5832`, with equality iff
   `sym F = eMin (±α) = ±α (M₁ + M₂) + w_* M₃`; Step 1 `gL_sub_gPlane` (projection onto `L_sym`),
   Step 2 `gPlane_sub_minL`, `gPlane_eq_minL`;
 * Lemma 2.5 (rank-one convexity): `two_c2L_eq` (eq. (2.5)), Step 1 `qL_symPart_vecMulVec`
@@ -78,7 +78,7 @@ lemma contDiff_fL : ContDiff ℝ ∞ (fun X : Fin 3 → Fin 3 → ℝ => fL (Mat
     Matrix.add_apply, Matrix.transpose_apply, Matrix.of_apply, smul_eq_mul]
   fun_prop
 
-/-! ### Lemma 2.3: the minimizers
+/-! ### Remark 2.3: the minimizers
 
 With `M₁ = e₁⊗e₁`, `M₂ = e₂⊗e₂`, `M₃ = e₃⊙(e₁+e₂)` (eq. (2.4)), the minimizers of `g_lin` are
 `e_± = ±α (M₁ + M₂) + w_* M₃`, `w_* = (11 - √193)/18`, `α = √(w_*(w_* - 2))`.
@@ -200,7 +200,7 @@ lemma gL_eMin (a : ℝ) (ha : a ^ 2 = alphaL ^ 2) : gL (eMin a) = minL := by
   rw [this] at hid
   linarith [show (a - a) ^ 2 = 0 by ring, show (wStar - wStar) ^ 2 = 0 by ring, hid]
 
-/-- **Lemma 2.3** (minimizers of the linear energy). `fL ≥ (575 - 193√193)/5832`, with equality
+/-- **Remark 2.3** (minimizers of the linear energy). `fL ≥ (575 - 193√193)/5832`, with equality
 if and only if `sym F = ±α (M₁ + M₂) + w_* M₃`. -/
 theorem fL_min (F : Mat 3 3) :
     minL ≤ fL F ∧ (fL F = minL ↔ symPart F = eMin alphaL ∨ symPart F = eMin (-alphaL)) := by
